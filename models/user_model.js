@@ -42,7 +42,7 @@ userSchema.methods.generateToken = async function() {
             {
                 userId: this._id.toString(),
                 email: this.email,
-                isAdmin: this.user_type === 'ADMIN', 
+                role: this.user_type === 'admin', 
             },
             process.env.JWT_KEY, // Ensure that JWT_KEY is set in your environment variables
             { expiresIn: "30d" } // Token expiration time

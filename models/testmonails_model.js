@@ -22,6 +22,11 @@ const TestimonailsSchema = new Schema({
     type: Boolean,
     default:false,
     required: true,
+  },
+ isdeleted: {
+    type: Boolean,
+    default:false,
+    required: true,
   }
 });
 

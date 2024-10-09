@@ -10,8 +10,9 @@ router.route('/register').post( authControllers.register);
 router.route("/login").post(validate(loginSchema),authControllers.login);
 
 router.route('/user').get( authMiddleware, authControllers.users);
+router.route('/me').get( authControllers.me);
 
-router.route('/alluser').get(authControllers.allUser);
+// router.route('/alluser').get(authControllers.allUser);
 
 router.route('/fetchrole').post(authControllers.fetch_role);
 module.exports = router;
